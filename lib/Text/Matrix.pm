@@ -7,7 +7,7 @@ use List::Util ();
 use List::MoreUtils ();
 use Storable ();
 
-our $VERSION = '0.99_01';
+our $VERSION = '0.99_02';
 
 sub new
 {
@@ -248,7 +248,7 @@ sub _mapped_data
 
     foreach my $row ( @{$data} )
     {
-        $row = [ map { $mapper->( $_ ) } @{$row} ];
+        $row = [ map { scalar( $mapper->( $_ ) ) } @{$row} ];
     }
 
     $self->{ _mapped_data } = $data;
@@ -481,7 +481,7 @@ Text::Matrix - Text table layout for matrices of short regular data.
                 [ qw/A1 B1/ ],
                 [ qw/A2 B2/ ],
             ],
-        mapper  => sub { reverse( $_[ 0 ] ) },
+        mapper  => sub { reverse( $_ ) },
         );
     print "Output:\n", $matrix->matrix();
 
@@ -501,7 +501,7 @@ matrices of single-character (such as Y/N for yes/no) or short
 multi-character data against row and column labels that are sufficiently
 longer that conventional table layouts distort the layout of the data.
 
-The core aim is to base the layout of the tabular data concisely and
+The core aim is to base the layout on the tabular data concisely and
 formated regularly to reflect the terseness of the underlying data,
 without being forced to compensate for the longer length of the
 labels for the columns and rows.
@@ -711,6 +711,8 @@ of C<' '>.
 Sets a subroutine reference to run over each data value, substituting
 the returned value for the purposes of layout and output.
 
+The data value is accessible as both C<$_> and C<$_[ 0 ]>.
+
 This is a convenience function in case you're sourcing your data
 from L<DBI> or something external and don't want to mess with running a
 C<map> across a multi-dimensional data-structure:
@@ -723,7 +725,7 @@ C<map> across a multi-dimensional data-structure:
                 [ qw/A1 B1/ ],
                 [ qw/A2 B2/ ],
             ],
-        mapper  => sub { reverse( $_[ 0 ] ) },
+        mapper  => sub { reverse( $_ ) },
         );
 
 =back

@@ -17,11 +17,11 @@ name: Text-Matrix
 provides:
   Text::Matrix:
     file: lib/Text/Matrix.pm
-    version: 0.99_01
+    version: 0.99_02
 requires:
   List::MoreUtils: 0
   List::Util: 0
   Storable: 0
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.99_01
+version: 0.99_02
