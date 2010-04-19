@@ -15,11 +15,11 @@ not run its Makefile.PL or Build.PL.
 Hash: SHA1
 
 SHA1 e626329991b92de0800c6921010adbcef40b38a0 Build.PL
-SHA1 732709dac976929d952e61d84a6eed5333f2565a Changes
+SHA1 3d916611e4323a512d59e78cd7e6fb43b2f3ece0 Changes
 SHA1 2fcc9180cb3fd1555fc227d8a663e29dafe7e9ff MANIFEST
-SHA1 200af71f9703ef6c06fa11979bcf3b2cfd29b1df META.yml
+SHA1 e6fa76995bf90a5cc1a0fc60c51d4a3fc7e46abd META.yml
 SHA1 107d83371104a73ac328b17a7ea9df8861be637e README
-SHA1 aaecc3a31b98f293896be4a53ee6a2fa71fdb26e lib/Text/Matrix.pm
+SHA1 71b44d8fdedccf1c9fe208f7601f2a42feb3b4f6 lib/Text/Matrix.pm
 SHA1 a2d1d8cb32fdae57885057a50f14b9a15dc56f3a t/00-load.t
 SHA1 76bb63f1459f265037108e413a861f517e8aaeb9 t/10-constructor.t
 SHA1 386c9cbddfd6cde2857f0cf93ec7a4dffd190a9a t/50-output.t
@@ -34,7 +34,7 @@ SHA1 8c57f2b89f12c54fd975c39ded1c100796ab5f17 xt/release/pod.t
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.10 (GNU/Linux)
 
-iEYEARECAAYFAkvIdx8ACgkQk0asf7iG0tR7lwCgthuKjbG14g5SmxuqUuYwaCeC
-paQAn3TdN4zno4U3LHS9YZKam6w1PpE1
-=eFDw
+iEYEARECAAYFAkvMYZgACgkQk0asf7iG0tTL0gCfVj2ZIr+VV8yGOheKNSgZa9U6
+hdcAoL7+FgORGX3pQaoYRLj7Bc5vM6kC
+=DtmK
 -----END PGP SIGNATURE-----
